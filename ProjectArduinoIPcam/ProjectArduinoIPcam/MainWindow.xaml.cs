@@ -17,6 +17,7 @@ using System.Net;
 using System.IO;
 using System.Drawing;
 using System.Windows.Forms;
+using System.IO.Ports;
 
 
 namespace ProjectArduinoIPcam
@@ -28,10 +29,18 @@ namespace ProjectArduinoIPcam
     {
         int read;
         int total = 0;
+        SerialPort arduino = new SerialPort("COM5");
         public MainWindow()
         {
             InitializeComponent();
             GetFrame();
+
+            SerialPort arduino = new SerialPort();
+            arduino.BaudRate = 9600;
+            arduino.DataBits = 8;
+            arduino.Parity = Parity.None;
+            arduino.StopBits = StopBits.One;
+            arduino.Open();
         }
 
        
@@ -58,7 +67,7 @@ namespace ProjectArduinoIPcam
             imgVideo.Source = bmpImg;
             
 
-
+            
      
 
         }
