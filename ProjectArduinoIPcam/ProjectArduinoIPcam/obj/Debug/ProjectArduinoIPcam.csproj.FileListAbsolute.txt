@@ -18,7 +18,6 @@ C:\Users\cedric\Documents\GitHub\datacom\ProjectArduinoIPcam\ProjectArduinoIPcam
 C:\Users\cedric\Documents\GitHub\datacom\ProjectArduinoIPcam\ProjectArduinoIPcam\obj\Debug\ProjectArduinoIPcam.pdb
 C:\Users\cedric\Documents\GitHub\datacom\ProjectArduinoIPcam\ProjectArduinoIPcam\bin\Debug\ProjectArduinoIPcam.exe
 C:\Users\cedric\Documents\GitHub\datacom\ProjectArduinoIPcam\ProjectArduinoIPcam\bin\Debug\ProjectArduinoIPcam.pdb
-C:\Users\cedric\Documents\GitHub\datacom\ProjectArduinoIPcam\ProjectArduinoIPcam\obj\Debug\ProjectArduinoIPcam.csprojResolveAssemblyReference.cache
 C:\Users\cedric\Documents\GitHub\datacom\ProjectArduinoIPcam\ProjectArduinoIPcam\obj\Debug\MainWindow.baml
 C:\Users\cedric\Documents\GitHub\datacom\ProjectArduinoIPcam\ProjectArduinoIPcam\obj\Debug\MainWindow.g.cs
 C:\Users\cedric\Documents\GitHub\datacom\ProjectArduinoIPcam\ProjectArduinoIPcam\obj\Debug\App.g.cs
