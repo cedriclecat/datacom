@@ -1,0 +1,13 @@
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\bin\Debug\IPCAM.exe.config
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\bin\Debug\IPCAM.exe
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\bin\Debug\IPCAM.pdb
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\bin\Debug\Interop.AXISMEDIACONTROLLib.dll
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\bin\Debug\AxInterop.AXISMEDIACONTROLLib.dll
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\Interop.AXISMEDIACONTROLLib.dll
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\AxInterop.AXISMEDIACONTROLLib.dll
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\IPCAM.csproj.ResolveComReference.cache
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\IPCAM.Form1.resources
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\IPCAM.Properties.Resources.resources
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\IPCAM.csproj.GenerateResource.Cache
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\IPCAM.exe
+C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\IPCAM.pdb

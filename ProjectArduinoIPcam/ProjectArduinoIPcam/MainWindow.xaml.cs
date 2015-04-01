@@ -77,7 +77,7 @@ namespace ProjectArduinoIPcam
         }
         private void GetFrame()
         {
-            string sourceURL = "http://172.23.49.1/axis-cgi/jpg/image.cgi";
+            //string sourceURL = "http://172.23.49.1/axis-cgi/jpg/image.cgi";
 
             byte[] buffer = new byte[1280 * 800];
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(sourceURL);
