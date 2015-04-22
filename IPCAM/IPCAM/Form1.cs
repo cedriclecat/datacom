@@ -14,9 +14,10 @@ namespace IPCAM
     public partial class Form1 : Form
     {
         int zoom = 0;
-        int pan = 0;
-        int tilt = 0;
-        int focus = 0;
+        int pan = -42;
+        int tilt = -16;
+        int focus = 1000;
+        NetworkCredential cred =  new NetworkCredential("student", "niets");
         public Form1()
         {
             InitializeComponent();
@@ -44,9 +45,34 @@ namespace IPCAM
         private void BtnTest_Click(object sender, EventArgs e)
         {
             WebRequest request = WebRequest.Create("http://172.23.49.1//axis-cgi/com/ptz.cgi?camera=1&move=home");
-            request.Credentials = new NetworkCredential("student", "niets");
-         
+            request.Credentials = cred;  
             WebResponse response = request.GetResponse();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnDown_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRight_Click(object sender, EventArgs e)
+        {
+            pan += 20;
+            WebRequest request = WebRequest.Create("http://172.23.49.1/axis-cgi/com/ptz.cgi?camera=1&pan="+pan);
+            request.Credentials = cred;
+            request.GetResponse();
+        }
+
+        private void BtnLeft_Click(object sender, EventArgs e)
+        {
+            pan -= 20;
+            WebRequest request = WebRequest.Create("http://172.23.49.1/axis-cgi/com/ptz.cgi?camera=1&pan=" + pan);
+            request.Credentials = cred;
+            request.GetResponse();
         }
     }
 }

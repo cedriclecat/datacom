@@ -11,4 +11,3 @@ C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\IPCAM.Properties.
 C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\IPCAM.csproj.GenerateResource.Cache
 C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\IPCAM.exe
 C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\IPCAM.pdb
-C:\Users\cedric\Documents\GitHub\datacom\IPCAM\IPCAM\obj\Debug\IPCAM.csprojResolveAssemblyReference.cache
