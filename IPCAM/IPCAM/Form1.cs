@@ -13,10 +13,10 @@ namespace IPCAM
 {
     public partial class Form1 : Form
     {
-        int zoom = 0;
+        
         int pan = -42;
         int tilt = -16;
-        int focus = 1000;
+      
         NetworkCredential cred =  new NetworkCredential("student", "niets");
         public Form1()
         {
@@ -47,32 +47,75 @@ namespace IPCAM
             WebRequest request = WebRequest.Create("http://172.23.49.1//axis-cgi/com/ptz.cgi?camera=1&move=home");
             request.Credentials = cred;  
             WebResponse response = request.GetResponse();
+            pan = -42;
+            tilt = -16;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            tilt += 5;
+            WebRequest request = WebRequest.Create("http://172.23.49.1/axis-cgi/com/ptz.cgi?camera=1&tilt=" + tilt);
+            requesthandling(request);
         }
 
         private void BtnDown_Click(object sender, EventArgs e)
         {
-
+            tilt -= 5;
+            WebRequest request = WebRequest.Create("http://172.23.49.1/axis-cgi/com/ptz.cgi?camera=1&tilt=" + tilt);
+            requesthandling(request);
         }
 
         private void BtnRight_Click(object sender, EventArgs e)
         {
             pan += 20;
+            if (pan >= 180) pan -= 360;
             WebRequest request = WebRequest.Create("http://172.23.49.1/axis-cgi/com/ptz.cgi?camera=1&pan="+pan);
-            request.Credentials = cred;
-            request.GetResponse();
+            requesthandling(request);
+          
         }
 
         private void BtnLeft_Click(object sender, EventArgs e)
         {
             pan -= 20;
+            if (pan <= -180) pan += 360;
             WebRequest request = WebRequest.Create("http://172.23.49.1/axis-cgi/com/ptz.cgi?camera=1&pan=" + pan);
+            requesthandling(request);
+        }
+        private void requesthandling(WebRequest request)
+        {
             request.Credentials = cred;
             request.GetResponse();
+            request.Abort();
+        }
+
+        private void BtnZoomIn_Click(object sender, EventArgs e)
+        {
+            int zoom = 100;           
+            WebRequest request = WebRequest.Create("http://172.23.49.1/axis-cgi/com/ptz.cgi?camera=1&rzoom=" + zoom);
+            requesthandling(request);
+        }
+
+        private void BtnZoomOut_Click(object sender, EventArgs e)
+        {
+
+            int zoom = -100;
+            WebRequest request = WebRequest.Create("http://172.23.49.1/axis-cgi/com/ptz.cgi?camera=1&rzoom=" + zoom);
+            requesthandling(request);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int focus = 100;
+            WebRequest request = WebRequest.Create("http://172.23.49.1/axis-cgi/com/ptz.cgi?camera=1&rfocus=" + focus);
+            requesthandling(request);
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            int focus = -100;
+            WebRequest request = WebRequest.Create("http://172.23.49.1/axis-cgi/com/ptz.cgi?camera=1&rfocus=" + focus);
+            requesthandling(request);
         }
     }
 }

@@ -31,12 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.BtnPlay = new System.Windows.Forms.Button();
             this.BtnStop = new System.Windows.Forms.Button();
-            this.AMC = new AxAXISMEDIACONTROLLib.AxAxisMediaControl();
             this.BtnTest = new System.Windows.Forms.Button();
             this.BtnUp = new System.Windows.Forms.Button();
             this.BtnDown = new System.Windows.Forms.Button();
             this.BtnRight = new System.Windows.Forms.Button();
             this.BtnLeft = new System.Windows.Forms.Button();
+            this.AMC = new AxAXISMEDIACONTROLLib.AxAxisMediaControl();
+            this.BtnZoomIn = new System.Windows.Forms.Button();
+            this.BtnZoomOut = new System.Windows.Forms.Button();
+            this.BtnFocusIn = new System.Windows.Forms.Button();
+            this.BtnFocusOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AMC)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,28 +64,19 @@
             this.BtnStop.UseVisualStyleBackColor = true;
             this.BtnStop.Click += new System.EventHandler(this.BtnStop_Click);
             // 
-            // AMC
-            // 
-            this.AMC.Enabled = true;
-            this.AMC.Location = new System.Drawing.Point(12, 12);
-            this.AMC.Name = "AMC";
-            this.AMC.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("AMC.OcxState")));
-            this.AMC.Size = new System.Drawing.Size(800, 600);
-            this.AMC.TabIndex = 0;
-            // 
             // BtnTest
             // 
-            this.BtnTest.Location = new System.Drawing.Point(1187, 70);
+            this.BtnTest.Location = new System.Drawing.Point(1187, 91);
             this.BtnTest.Name = "BtnTest";
             this.BtnTest.Size = new System.Drawing.Size(151, 23);
             this.BtnTest.TabIndex = 3;
-            this.BtnTest.Text = "test";
+            this.BtnTest.Text = "Home";
             this.BtnTest.UseVisualStyleBackColor = true;
             this.BtnTest.Click += new System.EventHandler(this.BtnTest_Click);
             // 
             // BtnUp
             // 
-            this.BtnUp.Location = new System.Drawing.Point(1109, 135);
+            this.BtnUp.Location = new System.Drawing.Point(1208, 142);
             this.BtnUp.Name = "BtnUp";
             this.BtnUp.Size = new System.Drawing.Size(52, 45);
             this.BtnUp.TabIndex = 4;
@@ -91,7 +86,7 @@
             // 
             // BtnDown
             // 
-            this.BtnDown.Location = new System.Drawing.Point(1109, 277);
+            this.BtnDown.Location = new System.Drawing.Point(1208, 284);
             this.BtnDown.Name = "BtnDown";
             this.BtnDown.Size = new System.Drawing.Size(52, 45);
             this.BtnDown.TabIndex = 5;
@@ -101,7 +96,7 @@
             // 
             // BtnRight
             // 
-            this.BtnRight.Location = new System.Drawing.Point(1187, 203);
+            this.BtnRight.Location = new System.Drawing.Point(1286, 210);
             this.BtnRight.Name = "BtnRight";
             this.BtnRight.Size = new System.Drawing.Size(52, 45);
             this.BtnRight.TabIndex = 6;
@@ -111,7 +106,7 @@
             // 
             // BtnLeft
             // 
-            this.BtnLeft.Location = new System.Drawing.Point(1025, 203);
+            this.BtnLeft.Location = new System.Drawing.Point(1124, 210);
             this.BtnLeft.Name = "BtnLeft";
             this.BtnLeft.Size = new System.Drawing.Size(52, 45);
             this.BtnLeft.TabIndex = 7;
@@ -119,11 +114,64 @@
             this.BtnLeft.UseVisualStyleBackColor = true;
             this.BtnLeft.Click += new System.EventHandler(this.BtnLeft_Click);
             // 
+            // AMC
+            // 
+            this.AMC.Enabled = true;
+            this.AMC.Location = new System.Drawing.Point(12, 12);
+            this.AMC.Name = "AMC";
+            this.AMC.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("AMC.OcxState")));
+            this.AMC.Size = new System.Drawing.Size(800, 600);
+            this.AMC.TabIndex = 0;
+            // 
+            // BtnZoomIn
+            // 
+            this.BtnZoomIn.Location = new System.Drawing.Point(1258, 343);
+            this.BtnZoomIn.Name = "BtnZoomIn";
+            this.BtnZoomIn.Size = new System.Drawing.Size(80, 27);
+            this.BtnZoomIn.TabIndex = 8;
+            this.BtnZoomIn.Text = "ZoomIn";
+            this.BtnZoomIn.UseVisualStyleBackColor = true;
+            this.BtnZoomIn.Click += new System.EventHandler(this.BtnZoomIn_Click);
+            // 
+            // BtnZoomOut
+            // 
+            this.BtnZoomOut.Location = new System.Drawing.Point(1124, 343);
+            this.BtnZoomOut.Name = "BtnZoomOut";
+            this.BtnZoomOut.Size = new System.Drawing.Size(86, 27);
+            this.BtnZoomOut.TabIndex = 9;
+            this.BtnZoomOut.Text = "ZoomOut";
+            this.BtnZoomOut.UseVisualStyleBackColor = true;
+            this.BtnZoomOut.Click += new System.EventHandler(this.BtnZoomOut_Click);
+            // 
+            // BtnFocusIn
+            // 
+            this.BtnFocusIn.Location = new System.Drawing.Point(1258, 376);
+            this.BtnFocusIn.Name = "BtnFocusIn";
+            this.BtnFocusIn.Size = new System.Drawing.Size(80, 27);
+            this.BtnFocusIn.TabIndex = 11;
+            this.BtnFocusIn.Text = "FocusIn";
+            this.BtnFocusIn.UseVisualStyleBackColor = true;
+            this.BtnFocusIn.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // BtnFocusOut
+            // 
+            this.BtnFocusOut.Location = new System.Drawing.Point(1124, 376);
+            this.BtnFocusOut.Name = "BtnFocusOut";
+            this.BtnFocusOut.Size = new System.Drawing.Size(86, 27);
+            this.BtnFocusOut.TabIndex = 10;
+            this.BtnFocusOut.Text = "FocusOut";
+            this.BtnFocusOut.UseVisualStyleBackColor = true;
+            this.BtnFocusOut.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 653);
+            this.Controls.Add(this.BtnFocusIn);
+            this.Controls.Add(this.BtnFocusOut);
+            this.Controls.Add(this.BtnZoomOut);
+            this.Controls.Add(this.BtnZoomIn);
             this.Controls.Add(this.BtnLeft);
             this.Controls.Add(this.BtnRight);
             this.Controls.Add(this.BtnDown);
@@ -149,6 +197,10 @@
         private System.Windows.Forms.Button BtnDown;
         private System.Windows.Forms.Button BtnRight;
         private System.Windows.Forms.Button BtnLeft;
+        private System.Windows.Forms.Button BtnZoomIn;
+        private System.Windows.Forms.Button BtnZoomOut;
+        private System.Windows.Forms.Button BtnFocusIn;
+        private System.Windows.Forms.Button BtnFocusOut;
     }
 }
 
