@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -16,13 +17,30 @@ namespace IPCAM
         int panzoom = 0;
         int pan = -42;
         int tilt = -16;
-      
+        SerialPort patatjes = new SerialPort();
+        static System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
+
         NetworkCredential cred =  new NetworkCredential("student", "niets");
         public Form1()
         {
             InitializeComponent();
-        }
+            patatjes.BaudRate = 9600;
+            patatjes.DataBits = 8;
+            patatjes.Parity = Parity.None;
+            patatjes.StopBits = StopBits.One;
 
+
+            myTimer.Tick += new EventHandler(TimerEventProcessor);
+
+            // Sets the timer interval to 5 seconds.
+            myTimer.Interval = 20000;
+           
+            
+        }
+        private static void TimerEventProcessor(Object myObject,EventArgs myEventArgs)
+        {
+            myTimer.Stop();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             AMC.MediaURL = "http://172.23.49.1/axis-cgi/mjpg/video.cgi";
@@ -34,6 +52,9 @@ namespace IPCAM
 
             AMC.Play();
             AMC.StretchToFit = true;
+
+                WebRequest request = WebRequest.Create("http://172.23.49.1//axis-cgi/com/ptz.cgi?continuouspantiltmove=-10,-0");
+                requesthandling(request);
         }
 
         private void BtnStop_Click(object sender, EventArgs e)
@@ -130,5 +151,11 @@ namespace IPCAM
         }
 
         //http://172.23.49.1//axis-cgi/com/ptz.cgi?continuouspantiltmove=-0,-0
+
+
+
+        
+
+        
     }
 }

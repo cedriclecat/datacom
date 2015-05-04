@@ -48,7 +48,7 @@
             // 
             this.BtnPlay.Location = new System.Drawing.Point(1187, 12);
             this.BtnPlay.Name = "BtnPlay";
-            this.BtnPlay.Size = new System.Drawing.Size(151, 23);
+            this.BtnPlay.Size = new System.Drawing.Size(73, 23);
             this.BtnPlay.TabIndex = 1;
             this.BtnPlay.Text = "Play";
             this.BtnPlay.UseVisualStyleBackColor = true;
@@ -56,9 +56,9 @@
             // 
             // BtnStop
             // 
-            this.BtnStop.Location = new System.Drawing.Point(1187, 41);
+            this.BtnStop.Location = new System.Drawing.Point(1266, 12);
             this.BtnStop.Name = "BtnStop";
-            this.BtnStop.Size = new System.Drawing.Size(151, 23);
+            this.BtnStop.Size = new System.Drawing.Size(73, 23);
             this.BtnStop.TabIndex = 2;
             this.BtnStop.Text = "Stop";
             this.BtnStop.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             // 
             // BtnTest
             // 
-            this.BtnTest.Location = new System.Drawing.Point(1187, 91);
+            this.BtnTest.Location = new System.Drawing.Point(1188, 41);
             this.BtnTest.Name = "BtnTest";
             this.BtnTest.Size = new System.Drawing.Size(151, 23);
             this.BtnTest.TabIndex = 3;
